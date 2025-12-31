@@ -10,6 +10,22 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 
+export const meta: Route.MetaFunction = () => [
+  { title: "Prashant Dubey | Data Pipeline Engineer" },
+  { name: "description", content: "Prashant Dubey - Data Pipeline Engineer from India specializing in ETL pipelines, Apache Kafka, Apache Spark, Snowflake, and cloud data platforms. Building scalable data solutions." },
+  { name: "keywords", content: "Prashant Dubey, Data Engineer, Data Pipeline Engineer, ETL, Apache Kafka, Apache Spark, Snowflake, Python, SQL, Azure, AWS, India" },
+  { name: "author", content: "Prashant Dubey" },
+  { name: "robots", content: "index, follow" },
+  { property: "og:title", content: "Prashant Dubey | Data Pipeline Engineer" },
+  { property: "og:description", content: "Data Pipeline Engineer specializing in ETL pipelines, Kafka, Spark, and cloud data platforms. Building scalable data solutions." },
+  { property: "og:type", content: "website" },
+  { property: "og:locale", content: "en_US" },
+  { name: "twitter:card", content: "summary_large_image" },
+  { name: "twitter:title", content: "Prashant Dubey | Data Pipeline Engineer" },
+  { name: "twitter:description", content: "Data Pipeline Engineer specializing in ETL pipelines, Kafka, Spark, and cloud data platforms." },
+  { name: "google-site-verification", content: "googleaa6c62d1f218c53d" },
+];
+
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -21,6 +37,7 @@ export const links: Route.LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
+  { rel: "canonical", href: "https://your-domain.com" },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
